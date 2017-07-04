@@ -7,7 +7,7 @@ unsigned char r_base64_url[] ={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 //only be used to generate r_base64_url array.
 + (void) print_base_reverse_string{
     unsigned char * d = (unsigned char *)malloc(130);
-    memset(d,0,130);
+    memset(d,255,130);// -1
     for(int i=0;i<64;i++){
         d[(unsigned char)base64_url[i]]=i;
         printf("%d_",(int)base64_url[i]);
